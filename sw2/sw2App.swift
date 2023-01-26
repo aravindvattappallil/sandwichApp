@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct sw2App: App {
+    @StateObject private var store = SandwichStore.testSandwichStore
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SandwichesListView(viewModel:SandwichesListViewModel())
         }
     }
 }
